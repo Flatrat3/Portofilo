@@ -1,0 +1,109 @@
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.column-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--text-primary);
+}
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.edu-card {
+  padding: 32px;
+  border-radius: 24px;
+  transition: var(--transition);
+}
+
+.edu-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.edu-period {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding: 4px 12px;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 12px;
+}
+
+.edu-degree {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.edu-school {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.edu-honors {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  border-radius: 16px;
+  gap: 16px;
+  transition: var(--transition);
+}
+
+.cert-card:hover {
+  transform: translateX(8px);
+  border-color: var(--accent);
+}
+
+.cert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.cert-title {
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .edu-grid {
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+}
