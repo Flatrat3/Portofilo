@@ -149,14 +149,20 @@
 }
 
 .card-1 {
-  top: 10%;
-  left: -10%;
+  top: 8%;
+  left: -12%;
 }
 
 .card-2 {
-  bottom: 10%;
-  right: -10%;
+  bottom: 8%;
+  right: -12%;
   animation-delay: -3s;
+}
+
+.card-3 {
+  bottom: -8%;
+  left: -8%;
+  animation-delay: -1.5s;
 }
 
 .card-value {
@@ -207,6 +213,7 @@
   
   .card-1 { left: -5%; }
   .card-2 { right: -5%; }
+  .card-3 { left: -2%; }
 }
 
 @media (max-width: 576px) {

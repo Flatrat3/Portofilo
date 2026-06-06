@@ -33,6 +33,7 @@ const Footer = () => {
               <li><a href="#home">Ana səhifə</a></li>
               <li><a href="#experience">Təcrübə</a></li>
               <li><a href="#skills">Bacarıqlar</a></li>
+              <li><a href="#projects">Layihələr</a></li>
               <li><a href="#education">Təhsil</a></li>
             </ul>
           </div>

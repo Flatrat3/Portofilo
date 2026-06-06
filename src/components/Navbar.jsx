@@ -18,6 +18,7 @@ const Navbar = ({ theme, toggleTheme }) => {
     { name: 'Ana səhifə', href: '#home' },
     { name: 'Təcrübə', href: '#experience' },
     { name: 'Bacarıqlar', href: '#skills' },
+    { name: 'Layihələr', href: '#projects' },
     { name: 'Təhsil', href: '#education' },
   ];
 
