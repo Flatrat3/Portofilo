@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Mail, Phone } from 'lucide-react';
+import Hero3DCanvas from './Hero3DCanvas';
 import './Hero.css';
 
 const Github = ({ size }) => (
@@ -26,6 +27,7 @@ const Hero = () => {
   return (
     <section id="home" className="hero-section">
       <div className="hero-background">
+        <Hero3DCanvas />
         <div className="blob blob-1"></div>
         <div className="blob blob-2"></div>
       </div>

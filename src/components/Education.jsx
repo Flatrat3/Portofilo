@@ -1,5 +1,6 @@
 import React from 'react';
 import { GraduationCap, Award } from 'lucide-react';
+import TiltCard from './TiltCard';
 import './Education.css';
 
 const Education = () => {
@@ -39,7 +40,7 @@ const Education = () => {
             
             <div className="edu-list">
               {education.map((edu, index) => (
-                <div key={index} className="edu-card glass">
+                <TiltCard key={index} className="edu-card glass">
                   <span className="edu-period">{edu.period}</span>
                   <h4 className="edu-degree">{edu.degree}</h4>
                   <p className="edu-school">{edu.school}</p>
@@ -49,7 +50,7 @@ const Education = () => {
                       {edu.honors}
                     </div>
                   )}
-                </div>
+                </TiltCard>
               ))}
             </div>
           </div>
@@ -62,12 +63,12 @@ const Education = () => {
             
             <div className="cert-list">
               {certifications.map((cert, index) => (
-                <div key={index} className="cert-card glass">
+                <TiltCard key={index} className="cert-card glass">
                   <div className="cert-icon">
                     <Award size={20} className="text-accent" />
                   </div>
                   <p className="cert-title">{cert}</p>
-                </div>
+                </TiltCard>
               ))}
             </div>
           </div>

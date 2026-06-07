@@ -1,5 +1,6 @@
 import React from 'react';
 import { Briefcase, Calendar } from 'lucide-react';
+import TiltCard from './TiltCard';
 import './Experience.css';
 
 const Experience = () => {
@@ -42,7 +43,7 @@ const Experience = () => {
                 <Briefcase size={20} className="text-accent" />
               </div>
               
-              <div className="timeline-content glass">
+              <TiltCard className="timeline-content glass">
                 <div className="timeline-header">
                   <h3 className="timeline-title">{exp.title}</h3>
                   <span className="timeline-period">
@@ -53,7 +54,7 @@ const Experience = () => {
                 
                 <h4 className="timeline-company">{exp.company}</h4>
                 <p className="timeline-desc">{exp.description}</p>
-              </div>
+              </TiltCard>
             </div>
           ))}
         </div>

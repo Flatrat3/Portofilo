@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ExternalLink, Folder, Star, GitBranch } from 'lucide-react';
+import TiltCard from './TiltCard';
 import './Projects.css';
 
 const GithubIcon = ({ size = 20 }) => (
@@ -85,7 +86,7 @@ const Projects = () => {
         {/* Featured Projects Grid */}
         <div className="projects-grid">
           {featuredProjects.map((project, index) => (
-            <div
+            <TiltCard
               key={project.id}
               className="project-card glass animate-fade-up"
               style={{ animationDelay: `${(index + 2) * 0.1}s` }}
@@ -134,7 +135,7 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </TiltCard>
           ))}
         </div>
 
@@ -166,31 +167,35 @@ const Projects = () => {
           ) : (
             <div className="github-grid">
               {repos.map((repo, index) => (
-                <a
+                <TiltCard
                   key={repo.id}
-                  href={repo.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="github-repo-card glass animate-fade-up"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className="repo-header">
-                    <Folder size={18} className="repo-folder-icon" />
-                    <span className="repo-lang">{repo.language || 'HTML/CSS'}</span>
-                  </div>
-                  <h4 className="repo-name">{repo.name}</h4>
-                  <p className="repo-description">
-                    {repo.description || ''}
-                  </p>
-                  <div className="repo-stats">
-                    <span className="repo-stat-item">
-                      <Star size={14} /> {repo.stargazers_count}
-                    </span>
-                    <span className="repo-stat-item">
-                      <GitBranch size={14} /> {repo.forks_count}
-                    </span>
-                  </div>
-                </a>
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%' }}
+                  >
+                    <div className="repo-header">
+                      <Folder size={18} className="repo-folder-icon" />
+                      <span className="repo-lang">{repo.language || 'HTML/CSS'}</span>
+                    </div>
+                    <h4 className="repo-name">{repo.name}</h4>
+                    <p className="repo-description">
+                      {repo.description || ''}
+                    </p>
+                    <div className="repo-stats">
+                      <span className="repo-stat-item">
+                        <Star size={14} /> {repo.stargazers_count}
+                      </span>
+                      <span className="repo-stat-item">
+                        <GitBranch size={14} /> {repo.forks_count}
+                      </span>
+                    </div>
+                  </a>
+                </TiltCard>
               ))}
             </div>
           )}
